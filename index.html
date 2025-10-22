@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>De pintinho para atheninha</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      color: #8B0000; /* vermelho escuro */
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .amor {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .texto {
+      position: absolute;
+      white-space: nowrap;
+      font-size: 20px;
+      animation: flutuar linear infinite;
+      opacity: 0.3;
+    }
+
+    @keyframes flutuar {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+      }
+    }
+
+    .coração {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 100px;
+      color: white;
+      z-index: 2;
+      position: relative;
+    }
+
+    .mensagem {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: white;
+      font-size: 18px;
+      line-height: 1.8;
+      border-radius: 10px;
+      text-align: justify;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <div class="amor" id="amor-container"></div>
+  <div class="coração">❤️</div>
+  <div class="mensagem">
+Atheninha, meu amor,
+
+Você é a razão do meu sorriso, a calma nos meus dias turbulentos e o brilho mais bonito no meu universo.
+
+Cada momento ao seu lado é um presente que eu nunca vou cansar de agradecer.
+
+Te amar é a coisa mais natural e verdadeira que já senti.
+
+Que essa coisa simples seja só mais uma forma de te lembrar o quanto eu te amo e o quanto você é especial pra mim.
+
+Eu tenho muito medo de te perder, meu amor, e nunca escondi isso de você. Espero que saiba, do fundo do meu coração, que eu te amo pra caralho e isso nunca vai mudar.
+
+Quero que saiba que você é o sangue que corre em minhas veias, que você é a luz que ilumina o meu dia, que você é o mapa da minha vida.
+
+Eu posso ser complicado e tudo mais, porém te prometo tentar ser o melhor namorado do mundo pra você.
+
+Desejo que a gente aprenda um com o outro, que a gente sempre se corrija, converse e resolva. Você é o amor da minha vida, e eu jamais, em todo esse mundo, quero te perder.
+
+Você é a pessoa mais incrível desse mundo e eu ainda vou te provar isso. Você vai verrrr né, duuur? Eu te amo, meu momo.
+
+Com muito carinho,  
+**Vitor 🤍**
+
+(covarde, parça ou pintinho na frente dos outros)  
+Mentira, momo, to brincando, foi só pra descontrair kakakakakaakka
+
+Eu te amo, com tudo o que sou. 💖
+  </div>
+
+  <script>
+    const container = document.getElementById('amor-container');
+
+    for (let i = 0; i < 100; i++) {
+      const texto = document.createElement('div');
+      texto.className = 'texto';
+      texto.innerText = 'eu te amo atheninha';
+      texto.style.left = Math.random() * 100 + 'vw';
+      texto.style.animationDuration = (5 + Math.random() * 10) + 's';
+      texto.style.fontSize = (14 + Math.random() * 16) + 'px';
+      container.appendChild(texto);
+    }
+  </script>
+</body>
+</html>
